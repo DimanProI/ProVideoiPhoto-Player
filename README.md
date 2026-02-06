@@ -4,7 +4,7 @@
 
 <a name="russian"></a>
 ## 🇷🇺 Описание
-**ProVideoiPhoto Player** — это профессиональное приложение для управления презентацией медиа-контента (фото и видео) на втором экране. Программа разработана для использования на мероприятиях, конференциях и шоу, где требуется надежное воспроизведение контента в высоком разрешении (вплоть до 4K) с возможностью предварительного просмотра и управления с основного экрана оператора.
+**ProVideoiPhoto Player** — это профессиональное приложение для управления презентацией медиа-контента (фото и видео) на втором экране. Программа разработана для использования на мероприятиях, конференциях и шоу, где требуется надежное воспроизведение контента в высоком разрешении с возможностью предварительного просмотра и управления с основного экрана оператора.
 
 ### Основные возможности
 *   **Двухэкранный режим**: Панель управления на основном мониторе и полноэкранный вывод на втором (проектор, LED-экран).
@@ -15,7 +15,6 @@
     *   Функция "Black Screen" (черный экран) для мгновенного скрытия контента.
     *   Встроенный таймер для отслеживания времени выступления.
     *   Предпросмотр контента в интерфейсе оператора.
-    *   Ползунок перемотки с точностью до миллисекунд.
 *   **Горячие клавиши**: Настраиваемое управление с клавиатуры (F1 для справки).
 
 ### Технологический стек
@@ -37,7 +36,7 @@
 
 <a name="english"></a>
 ## 🇺🇸 Description
-**ProVideoiPhoto Player** is a professional application for managing media content presentation (photos and videos) on a secondary screen. The program is designed for events, conferences, and shows where reliable high-resolution playback (up to 4K) is required, along with preview capabilities and control from the operator's main screen.
+**ProVideoiPhoto Player** is a professional application for managing media content presentation (photos and videos) on a secondary screen. The program is designed for events, conferences, and shows where reliable high-resolution playback is required, along with preview capabilities and control from the operator's main screen.
 
 ### Key Features
 *   **Dual Screen Mode**: Control panel on the primary monitor and full-screen output on the secondary one (projector, LED screen).
@@ -48,7 +47,6 @@
     *   "Black Screen" function to instantly hide content.
     *   Built-in timer to track presentation time.
     *   Content preview in the operator interface.
-    *   Seek slider with millisecond precision.
 *   **Hotkeys**: Configurable keyboard controls (F1 for help).
 
 ### Tech Stack
