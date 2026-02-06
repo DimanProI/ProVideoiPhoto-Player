@@ -1,0 +1,66 @@
+# ProVideoiPhoto Player
+
+[Русский](#russian) | [English](#english)
+
+<a name="russian"></a>
+## 🇷🇺 Описание
+**ProVideoiPhoto Player** — это профессиональное приложение для управления презентацией медиа-контента (фото и видео) на втором экране. Программа разработана для использования на мероприятиях, конференциях и шоу, где требуется надежное воспроизведение контента в высоком разрешении (вплоть до 4K) с возможностью предварительного просмотра и управления с основного экрана оператора.
+
+### Основные возможности
+*   **Двухэкранный режим**: Панель управления на основном мониторе и полноэкранный вывод на втором (проектор, LED-экран).
+*   **Поддержка форматов**: Воспроизведение популярных видео (MP4, MOV, MKV) и изображений (JPG, PNG).
+*   **Профессиональный плеер**: Основан на мощном движке **libmpv**, обеспечивающем высокую производительность и аппаратное ускорение.
+*   **Управление плейлистом**: Добавление файлов через Drag & Drop, навигация по списку.
+*   **Инструменты презентации**:
+    *   Функция "Black Screen" (черный экран) для мгновенного скрытия контента.
+    *   Встроенный таймер для отслеживания времени выступления.
+    *   Предпросмотр контента в интерфейсе оператора.
+    *   Ползунок перемотки с точностью до миллисекунд.
+*   **Горячие клавиши**: Настраиваемое управление с клавиатуры (F1 для справки).
+
+### Технологический стек
+Приложение создано с использованием современных технологий:
+*   **Язык**: Python 3.13+
+*   **Интерфейс**: PyQt6 (Qt Framework)
+*   **Медиа-движок**: LibMPV (через python-mpv)
+
+### Установка и запуск
+1.  Установите зависимости: `pip install -r requirements.txt`
+2.  Убедитесь, что библиотека `libmpv-2.dll` находится в корневой папке или доступна в системе.
+3.  Запустите приложение: `python -m src.main`
+
+---
+*Продукт был создан Дмитрием Сальниковым для открытого распространения, все права защищены.*
+
+---
+---
+
+<a name="english"></a>
+## 🇺🇸 Description
+**ProVideoiPhoto Player** is a professional application for managing media content presentation (photos and videos) on a secondary screen. The program is designed for events, conferences, and shows where reliable high-resolution playback (up to 4K) is required, along with preview capabilities and control from the operator's main screen.
+
+### Key Features
+*   **Dual Screen Mode**: Control panel on the primary monitor and full-screen output on the secondary one (projector, LED screen).
+*   **Format Support**: Playback of popular video formats (MP4, MOV, MKV) and images (JPG, PNG).
+*   **Professional Player**: Powered by the robust **libmpv** engine, ensuring high performance and hardware acceleration.
+*   **Playlist Management**: Drag & Drop file addition, list navigation.
+*   **Presentation Tools**:
+    *   "Black Screen" function to instantly hide content.
+    *   Built-in timer to track presentation time.
+    *   Content preview in the operator interface.
+    *   Seek slider with millisecond precision.
+*   **Hotkeys**: Configurable keyboard controls (F1 for help).
+
+### Tech Stack
+The application is built using modern technologies:
+*   **Language**: Python 3.13+
+*   **Interface**: PyQt6 (Qt Framework)
+*   **Media Engine**: LibMPV (via python-mpv)
+
+### Installation and Usage
+1.  Install dependencies: `pip install -r requirements.txt`
+2.  Ensure the `libmpv-2.dll` library is located in the root folder or is accessible in the system.
+3.  Run the application: `python -m src.main`
+
+---
+*Product created by Dmitry Salnikov for open distribution, all rights reserved.*
