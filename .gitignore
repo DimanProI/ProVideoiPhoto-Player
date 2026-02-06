@@ -1,0 +1,15 @@
+.trae/
+.vscode/
+__pycache__/
+*.pyc
+*.exe
+dist/
+build/
+*.spec
+venv/
+.env
+.DS_Store
+*.log
+*.dll
+*.lib
+*.a
