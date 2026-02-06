@@ -57,6 +57,11 @@ class MainWindow(QMainWindow):
         self.resize(1200, 800)
         self.setAcceptDrops(True)
         
+        # Set Application Icon
+        icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'assets', 'icon.png')
+        if os.path.exists(icon_path):
+            self.setWindowIcon(QIcon(icon_path))
+        
         self._apply_theme()
         self._init_ui()
         self._connect_signals()
@@ -206,8 +211,17 @@ class MainWindow(QMainWindow):
         main_layout.addLayout(top_bar)
         
         # 2. Main Content (Splitter)
-        splitter = QSplitter(Qt.Orientation.Horizontal)
-        main_layout.addWidget(splitter, 1)
+        self.main_splitter = QSplitter(Qt.Orientation.Horizontal)
+        self.main_splitter.setHandleWidth(5)
+        self.main_splitter.setStyleSheet("""
+            QSplitter::handle {
+                background-color: #444;
+            }
+            QSplitter::handle:hover {
+                background-color: #666;
+            }
+        """)
+        main_layout.addWidget(self.main_splitter, 1)
         
         # Left Side: Playlist
         self.playlist_widget = QWidget()
@@ -223,15 +237,24 @@ class MainWindow(QMainWindow):
         self.playlist_view.itemDoubleClicked.connect(self._on_playlist_item_dbl_click)
         playlist_layout.addWidget(self.playlist_view)
         
-        splitter.addWidget(self.playlist_widget)
+        self.main_splitter.addWidget(self.playlist_widget)
         
         # Right Side: Previews and Controls
         right_panel = QWidget()
         right_layout = QVBoxLayout(right_panel)
-        splitter.addWidget(right_panel)
+        self.main_splitter.addWidget(right_panel)
         
-        # Previews (Current and Next)
-        previews_layout = QHBoxLayout()
+        # Previews (Current and Next) - Now resizable
+        self.previews_splitter = QSplitter(Qt.Orientation.Horizontal)
+        self.previews_splitter.setHandleWidth(5)
+        self.previews_splitter.setStyleSheet("""
+            QSplitter::handle {
+                background-color: #444;
+            }
+            QSplitter::handle:hover {
+                background-color: #666;
+            }
+        """)
         
         # Current Preview (Dashboard Player)
         self.current_preview_frame = QFrame()
@@ -248,16 +271,20 @@ class MainWindow(QMainWindow):
         self.preview_label.setText("No Media Selected")
         preview_layout.addWidget(self.preview_label)
         
-        previews_layout.addWidget(self.current_preview_frame, 7)
+        self.previews_splitter.addWidget(self.current_preview_frame)
         
         # Next Preview
         self.next_preview_frame = QFrame()
         self.next_preview_frame.setFrameStyle(QFrame.Shape.StyledPanel)
         self.next_preview_frame.setMinimumSize(160, 90)
         self.next_preview_frame.setStyleSheet("background-color: #222;")
-        previews_layout.addWidget(self.next_preview_frame, 3)
+        self.previews_splitter.addWidget(self.next_preview_frame)
         
-        right_layout.addLayout(previews_layout)
+        # Set stretch factors (70% vs 30%)
+        self.previews_splitter.setStretchFactor(0, 7)
+        self.previews_splitter.setStretchFactor(1, 3)
+        
+        right_layout.addWidget(self.previews_splitter, 1)
         
         # Seek Slider and Time
         seek_layout = QHBoxLayout()
@@ -317,7 +344,7 @@ class MainWindow(QMainWindow):
         self.black_btn.clicked.connect(self._toggle_black_screen)
         
         # Set splitter sizes (30% playlist, 70% preview)
-        splitter.setSizes([360, 840])
+        self.main_splitter.setSizes([360, 840])
 
     def _connect_signals(self):
         self.playlist_manager.current_item_changed.connect(self._on_track_changed)
