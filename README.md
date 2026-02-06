@@ -24,9 +24,19 @@
 *   **Медиа-движок**: LibMPV (через python-mpv)
 
 ### Установка и запуск
-1.  Установите зависимости: `pip install -r requirements.txt`
-2.  Убедитесь, что библиотека `libmpv-2.dll` находится в корневой папке или доступна в системе.
-3.  Запустите приложение: `python -m src.main`
+
+#### Вариант 1: Готовый EXE (Рекомендуется для пользователей)
+1.  Перейдите в раздел [Releases](https://github.com/DimanProI/ProVideoiPhoto-Player/releases).
+2.  Скачайте архив с последней версией для вашей ОС (например, `ProVideoiPhoto_Player_Clean_v2.zip`).
+3.  Распакуйте архив в удобное место.
+4.  Запустите файл `ProVideoiPhoto.exe`.
+    *   *Примечание: Все необходимые библиотеки (включая libmpv) уже встроены.*
+
+#### Вариант 2: Запуск из исходного кода (Для разработчиков)
+1.  Установите Python 3.13+.
+2.  Установите зависимости: `pip install -r requirements.txt`
+3.  Убедитесь, что библиотека `libmpv-2.dll` (или `libmpv.so` для Linux) доступна.
+4.  Запустите приложение: `python -m src.main`
 
 ---
 *Продукт был создан Дмитрием Сальниковым для открытого распространения, все права защищены.*
@@ -56,9 +66,19 @@ The application is built using modern technologies:
 *   **Media Engine**: LibMPV (via python-mpv)
 
 ### Installation and Usage
-1.  Install dependencies: `pip install -r requirements.txt`
-2.  Ensure the `libmpv-2.dll` library is located in the root folder or is accessible in the system.
-3.  Run the application: `python -m src.main`
+
+#### Option 1: Pre-built EXE (Recommended for Users)
+1.  Go to the [Releases](https://github.com/DimanProI/ProVideoiPhoto-Player/releases) section.
+2.  Download the archive with the latest version (e.g., `ProVideoiPhoto_Player_Clean_v2.zip`).
+3.  Unzip the archive.
+4.  Run `ProVideoiPhoto.exe`.
+    *   *Note: All dependencies (including libmpv) are already bundled.*
+
+#### Option 2: Running from Source (For Developers)
+1.  Install Python 3.13+.
+2.  Install dependencies: `pip install -r requirements.txt`
+3.  Ensure the `libmpv-2.dll` library (or `libmpv.so` for Linux) is available.
+4.  Run the application: `python -m src.main`
 
 ---
 *Product created by Dmitry Salnikov for open distribution, all rights reserved.*
